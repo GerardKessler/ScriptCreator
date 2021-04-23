@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Instrucciones</title></head>
+<body><h1>Script Creator:</h1>
+<p>Creado por Gerardo Késsler</p>
+<br>
+<h2>Introducción:</h2>
+<p>La idea de esta herramienta es brindar la posibilidad de crear scripts simples, para resolver inconvenientes de accesibilidad en windows. Dentro del mundo de la programación, AutoHotkey facilita mucho la incursión al código por su simpleza y su fácil aplicación.
+<br>
+Este script creará un archivo con el código base, donde se irán guardando las coordenadas de pantalla a las cuales podremos agregarle atajos de teclado para su fácil acceso.
+También podemos compilar el archivo en formato exe, para su ejecución en un sistema que no cuente con el AutoHotkey.</p>
+<br>
+<h3>Instrucciones:</h3>
+<p>Una vez ejecutado el archivo ScriptCreator.exe, va a crearse en la raíz del mismo un archivo llamado Coordenadas.ahk.
+Este ya es un script en si mismo porque tiene un código base con instrucciones para sonar al iniciarse y al finalizar. Un atajo para cerrarlo, así como verbalizaciones para lectores de pantalla.</p>
+<p>Importante no modificar el órden de ningún archivo o carpeta de este script hasta no culminar con la creación de uno nuevo.</p>
+<p>Una vez abierto el ScriptCreator.exe, podremos comenzar a guardar las coordenadas de pantalla de la siguiente forma:<br>
+En el caso de contar con ayuda visual, necesitaremos que nos sitúen el puntero del mouse en la coordenada a la cual queremos agregarle un atajo de teclado. En el caso de hacerlo por nuestra propia cuenta, deberemos utilizar los comandos propios del lector de pantallas para situar el mouse en el lugar correcto.<br>
+Una vez allí, podremos pulsar Windows, C. El cual nos activará una ventana gui donde podremos configurar algunas cosas referidas a esa coordenada.  </p>
+<ul>
+<li>Comando de teclado:<br/>Como su nombre lo indica, aquí podremos pulsar un atajo de teclado, el cual será asignado a la acción que verificaremos en el cuadro siguiente.</li>
+<li>Acción de Mouse:<br/>Aquí podremos definir que acción se realizará al pulsar el atajo configurado en el cuadro antrior. Enfocamos el deseado con flechas arriba y abajo, y el mismo quedará seleccionado al tabular a la próxima opción.</li>
+<li>Mensaje a través de NVDA:<br/>Este cuadro es opcional. Aquí podremos escribir un texto que será verbalizado por NVDA luego de ejecutar la acción configurada en el paso anterior.</li>
+<li>Descripción de la macro:<br/>Este cuadro también es opcional. En el mismo podremos escribir una pequeña descripción que será agregada en el código a modo de comentario, sobre todo pensado para los que luego revisen el código.</li>
+<li>Aceptar:<br/>Con este botón guardaremos los cambios, y cerraremos la ventana gui.</li>
+</ul>
+<br>
+<h3>Revisando el código:</h3>
+<p>Una vez configuradas nuestras macros, es conveniente revisar el archivo Coordenadas.ahk, para verificar que los atajos de teclado hayan sido asignados correctamente. Para ello podremos utilizar el block de notas incluído en Windows. 
+En la línea 13 encontraremos un texto de comentario llamado macros, el cual es ignorado por el intérprete. Luego del mismo, se situarán los bloques de código que corresponden a cada una de esas macros.</p>
+<p>En la primer línea de cada uno de esos bloques de código se encontrará la configuración del atajo de teclado. Si se ha guardado correctamente, antes de los dos pares de dos puntos, debería estar él, o los signos que representan el atajo de teclado.<br>
+En el caso de no tener los signos correspondientes, podremos asignarlos manualmente de la siguiente forma:<br>
+El acento sircunflejo representa a la tecla Control. Lo podemos escribir con Shift acento agudo, y luego la barra espaciadora.<br>
+El shift, es representado por el signo más.<br>
+La tecla Alt, es representada por el signo Cerrar admiración.<br>
+La tecla Windows por el signo numeral, el que puede imprimirse con el atajo Alt, control, 3 alfanumérico. Todo esto con la distribución de español de españa.  </p>
+<br>
+<p>Ejemplos:</p>
+<hr />
+<ul>
+<li>^p:: Es igual a Control p.</li>
+<li>+k:: Es igual a Shift k.</li>
+<li>!s:: Es igual a Alt, s.</li>
+<li>^!j:: Es igual a Control, alt, j.</li>
+</ul>
+<hr>
+<br>
+<h3>Compilación del script:</h3>
+<p>Una vez revisado el script podremos compilarlo, es decir, transformar el archivo Coordenadas.ahk en Coordenadas.exe. Este último contendrá el intérprete para poder ejecutarlo en sistemas sin el AutoHotkey instalado.
+Para ello pulsamos el atajo; Windows, o. En el caso de que no se ejecute la primera vez, repetimos el atajo.<br/>Se va a abrir unos segundos la línea de comandos, y va a realizarse la compilación. Si todo ha salido correctamente, deberíamos encontrar el archivo Coordenadas.exe junto al, Coordenadas.ahk.
+Para cerrar el Script general, lo podremos hacer con; Alt,Q.</p>
+<br>
+<h3>Manipulación del nuevo script:</h3>
+<p>Felicitaciones, ya has realizado tu primer script. El mismo contará con los atajos asignados en su creación, como el atajo; Shift, escape, para cerrar el mismo.<br/>Es conveniente que cuando termines, copies el archivo coordenadas.exe, así como la carpeta Speak en una nueva carpeta a parte, con el nombre que desees, para poder ejecutarlo en otro sistema.<br/>También es conveniente que elimines el archivo Coordenadas.exe de la carpeta del ScriptCreator, así como el Coordenadas.ahk.
+De todas maneras, al cerrar el script general y volverlo a abrir en otro momento, si este encuentra un coordenadas.ahk preguntará si deseas reemplazarlo, o seguir trabajando con él.  </p>
+<br>
+<p>###Resumen de atajos:</p>
+<ul>
+<li>Windows, c; Configura una nueva macro con la coordenada actual.</li>
+<li>Windows, O; Compila el archivo ahk en exe.</li>
+<li>Alt, Q; Cierra el Script Creator.</li>
+<li>Shift, Escape; Cierra el script creado.</li>
+
+</ul>
+<br>
+<h3>Despedida:</h3>
+<p>Si desea reportar alguna falla, realizar alguna sugerencia, o simplemente agradecer el trabajo, lo pueden hacer a través del siguiente correo electrónico:<br/><a href='mailto:ReaperYOtrasYerbas@gmail.com' target='_blank' class='url'>ReaperYOtrasYerbas@gmail.com</a></p>
+<br>
+<p>Gerardo Késsler.</p>
+</body>
+</html>
