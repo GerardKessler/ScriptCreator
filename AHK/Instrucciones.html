@@ -1,54 +1,79 @@
 <h1 id="script-creator">Script Creator:</h1>
-<p>Creado por Gerardo Késsler</p>
-<p><br></p>
+<p>Creado por Gera Kessler <a href="mailto:gera.ar@yahoo.com"
+class="email">gera.ar@yahoo.com</a></p>
 <h2 id="introducción">Introducción:</h2>
-<p>La idea de esta herramienta es brindar la posibilidad de crear scripts simples para resolver inconvenientes de accesibilidad en windows. Dentro del mundo de la programación, AutoHotkey facilita mucho la incursión a al código por su simpleza y su fácil aplicación.<br />
-Básicamente se nos creará una plantilla de script donde podremos agregar coordenadas de pantalla, a las cuales podremos agregarle atajos de teclado para su fácil acceso. También podremos compilar el archivo en formato exe para su ejecución en un sistema que no cuente con el AutoHotkey instalado.</p>
-<p><br></p>
+<p>La idea de esta herramienta es brindar la posibilidad de crear
+scripts simples para resolver inconvenientes de accesibilidad en
+windows.</p>
+<p>Básicamente se nos creará una plantilla de script donde podremos
+agregar coordenadas de pantalla, a las cuales podremos agregarle atajos
+de teclado para su fácil acceso. También podremos compilar el archivo en
+formato exe para su ejecución en un sistema que no cuente con el
+AutoHotkey instalado.</p>
 <h3 id="instrucciones">Instrucciones:</h3>
-<p>Una vez ejecutado el script, va a crearse en la raíz del mismo, donde se encuentra el ScriptCreator.exe, un archivo llamado Coordenadas.ahk. El mismo es un script en si mismo, ya que tiene un código base con un mensaje de inicio con NVDA, al igual que un atajo de teclado asignado para cerrarlo.<br />
-Importante no modificar el órden de ningún archivo o carpeta de este script hasta no culminar con la creación de uno nuevo.<br />
-Una vez abierto el ScriptCreator.exe, podremos comenzar a guardar las coordenadas de pantalla de la siguiente forma:<br />
-En el caso de contar con ayuda visual, solicitaremos nos sitúen el puntero del mouse en la coordenada a la cual queremos agregarle un atajo de teclado. En el caso de hacerlo por nuestra propia cuenta, deberemos utilizar los comandos propios del lector de pantallas para situar el mouse en el lugar correcto.<br />
-Una vez allí, podremos pulsar; control, alt, C. Lo que nos activará una ventana gui donde podremos configurar algunas cosas referidas a esa coordenada.</p>
+<p>Una vez ejecutado el script, va a crearse en la raíz del mismo, donde
+se encuentra el ScriptCreator.exe, un archivo llamado Coordenadas.ahk.
+El mismo es el código fuente de un script en si mismo, ya que tiene un
+código base con un mensaje de inicio con sapi, al igual que un atajo de
+teclado asignado para cerrarlo.<br />
+Una vez abierto el ScriptCreator.exe, podremos comenzar a guardar las
+coordenadas de pantalla de la siguiente forma:</p>
 <ul>
-<li><p>Comando de teclado:<br />
-Como su nombre lo indica, aquí podremos pulsar un atajo de teclado, el cual será asignado a la acción que verificaremos en el cuadro siguiente.</p></li>
-<li><p>Acción de Mouse:<br />
-Aquí podremos definir que acción se realizará al pulsar el atajo configurado en el cuadro antrior. Enfocamos el deseado con flechas arriba y abajo, y el mismo quedará seleccionado al tabular a la próxima opción.</p></li>
-<li><p>Mensaje a través de NVDA:<br />
-Este cuadro es opcional. Aquí podremos escribir un texto que será verbalizado por NVDA luego de ejecutar la acción configurada en el paso anterior.</p></li>
-<li><p>Descripción de la macro:<br />
-Este cuadro también es opcional. En el mismo podremos escribir una pequeña descripción que será agregada en el código a modo de comentario, sobre todo pensado para los que luego revisen el código.</p></li>
-<li><p>Aceptar:<br />
-Con este botón guardaremos los cambios, y cerraremos la ventana gui.</p></li>
+<li>Mover el puntero del mouse a la posición buscada</li>
+<li>Pulsar el comando control + shift + c para activar la interfaz de
+configuración de la coordenada</li>
 </ul>
-<p><br></p>
+<p>Opciones que se muestran en la interfaz:</p>
+<p>Nombre:<br />
+El nombre del archivo ejecutable resultante al compilar.</p>
+<p>Comando de teclado:<br />
+Aquí podremos pulsar un atajo de teclado, el cual será asignado a la
+acción que verificaremos en el cuadro siguiente.</p>
+<p>Acción de Mouse:<br />
+Aquí podremos definir que acción se realizará al pulsar el atajo
+configurado en el cuadro antrior.</p>
+<p>Mensaje a través de sapi:<br />
+Este cuadro es opcional. Aquí podremos escribir un texto que será
+verbalizado por sapi luego de ejecutar la acción configurada en el paso
+anterior.</p>
+<p>Descripción de la macro:<br />
+Este cuadro también es opcional. En el mismo podremos escribir una
+pequeña descripción que será agregada en el código a modo de comentario,
+sobre todo pensado para los que luego revisen el código.</p>
+<p>Aceptar:<br />
+Con este botón guardaremos los cambios, y cerraremos la ventana gui.</p>
 <h3 id="compilación-del-script">Compilación del script:</h3>
-<p>Una vez terminado el script podremos compilarlo, es decir, transformar el archivo Coordenadas.ahk, en Coordenadas.exe. Este último contendrá el intérprete para poder ejecutarlo en sistemas sin el AutoHotkey instalado. Para ello pulsamos el atajo; control, shift, p.<br />
-Si todo ha salido correctamente, deberíamos encontrar el archivo nuevoScript.exe junto a Coordenadas.ahk. Para cerrar el Script general, lo podremos hacer con; control, shift, Q.</p>
-<p><br></p>
-<h3 id="manipulación-del-nuevo-script">Manipulación del nuevo script:</h3>
-<p>Felicitaciones, ya has realizado tu primer script. El mismo contará con los atajos asignados en su creación, como el atajo; Shift, escape, para cerrar el mismo.<br />
-Es conveniente que cuando termines copies el archivo nuevoScript.exe, así como la carpeta Speak en una nueva carpeta a parte, con el nombre que desees.<br />
-También es conveniente que elimines el archivo nuevoScript.exe de la carpeta del ScriptCreator, así como el Coordenadas.ahk. De todas maneras, al cerrar el script general y volverlo a abrir en otro momento, si este encuentra un coordenadas.ahk preguntará si deseas reemplazarlo, o seguir trabajando con él.</p>
-<p><br></p>
-<h3 id="configuración-de-atajos-del-script">Configuración de atajos del script:</h3>
-<p>Con el atajo shift, f1, se activará una lista con los atajos actuales del script.<br />
-Para modificarlos tan solo hay que tabular y pulsar en la opción Modificar los atajos de teclado. Una vez allí podremos ingresar un nuevo comando en cada cuadro, entre los cuales podremos movernos con el tabulador. Una vez finalizado hay que pulsar sobre el botón guardar los cambios.</p>
-<p><br></p>
+<p>Una vez terminado el script podremos compilarlo, es decir,
+transformar el archivo Coordenadas.ahk, en un archivo ejecutable. Este
+último contendrá el intérprete para poder ejecutarlo en sistemas sin el
+AutoHotkey instalado. Para ello pulsamos el atajo:</p>
+<pre><code>control + shift + p.  </code></pre>
+<p>Si todo ha salido correctamente, deberíamos encontrar el archivo con
+el nombre asignado y la extensión exe en la carpeta del script.</p>
+<p>Para cerrar el Script general, lo podremos hacer con el atajo:</p>
+<pre><code>control+ shift+ q</code></pre>
+<h3 id="manipulación-del-nuevo-script">Manipulación del nuevo
+script:</h3>
+<p>Felicitaciones, ya has realizado tu primer script. El mismo contará
+con los atajos asignados en su creación, así como el atajo preasignado
+para cerrarlo:</p>
+<pre><code>shift + escape</code></pre>
+<h3 id="configuración-de-atajos-del-script">Configuración de atajos del
+script:</h3>
+<p>Con el atajo shift, f1, se activará una lista con los atajos actuales
+del script.<br />
+Para modificarlos tan solo hay que tabular y pulsar en la opción
+Modificar los atajos de teclado. Una vez allí podremos ingresar un nuevo
+comando en cada cuadro, entre los cuales podremos movernos con el
+tabulador. Una vez finalizado hay que pulsar sobre el botón guardar los
+cambios.</p>
 <p>###Resumen de atajos:</p>
 <ul>
-<li>Control, shift, c; Configura una nueva macro con la coordenada actual.</li>
-<li>Control, shift, p; Compila el archivo ahk en exe.</li>
-<li>Control, shift, q; Cierra el Script Creator.</li>
-<li>control, q; pausa y reanuda el script principal.</li>
-<li>Shift, f1; Abre la ventana con la lista de comandos.</li>
-<li>Shift, Escape; Cierra el nuevo script creado.</li>
+<li>control+ shift+ c; Configura una nueva macro con la coordenada
+actual.</li>
+<li>control + shift+ p; Compila el archivo ahk en exe.</li>
+<li>control+ shift+ q; Cierra el Script Creator.</li>
+<li>control + q; pausa y reanuda el script principal.</li>
+<li>shift+ f1; Abre la ventana con la lista de comandos.</li>
+<li>shift+ Escape; Cierra el nuevo script creado.</li>
 </ul>
-<p><br></p>
-<h3 id="despedida">Despedida:</h3>
-<p>Si desea reportar alguna falla, realizar alguna sugerencia, o simplemente agradecer el trabajo, lo pueden hacer a través del siguiente correo electrónico:<br />
-<a href="mailto:ReaperYOtrasYerbas@gmail.com" class="email">ReaperYOtrasYerbas@gmail.com</a></p>
-<p><br></p>
-<p>Gerardo Késsler.</p>

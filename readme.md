@@ -11,7 +11,7 @@ Básicamente se nos creará una plantilla de script donde podremos agregar coord
 ### Instrucciones:
 
 Una vez ejecutado el script, va a crearse en la raíz del mismo, donde se encuentra el ScriptCreator.exe, un archivo llamado Coordenadas.ahk.
-El mismo es el código fuente de un script en si mismo, ya que tiene un código base con un mensaje de inicio con NVDA, al igual que un atajo de teclado asignado para cerrarlo.  
+El mismo es el código fuente de un script en si mismo, ya que tiene un código base con un mensaje de inicio con sapi, al igual que un atajo de teclado asignado para cerrarlo.  
 Una vez abierto el ScriptCreator.exe, podremos comenzar a guardar las coordenadas de pantalla de la siguiente forma:  
 
 * Mover el puntero del mouse a la posición buscada
